@@ -1,4 +1,19 @@
 @import "./app-variables";
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Raleway');
+
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+
+    &:visited, &:hover, &:active {
+        text-decoration: none;
+        color: white;
+    }
+}
 
 button {
     font-size: 20px;
@@ -10,9 +25,12 @@ button {
 
 h1 {
     margin-top: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 p {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 200;
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 2rem;
@@ -26,6 +44,27 @@ p {
 
     @media (max-width: 1000px) {
         padding: 1.5rem 0;
+    }
+}
+
+.btn {
+    border: 1px solid $yellow-dark;
+    border-radius: 3px;
+    padding: 5px 25px;
+    background: $yellow-dark;
+
+    & + & {
+        margin-left: 15px;
+    }
+
+    &--link {
+        text-decoration: none;
+        transition: 0.2s ease;
+        width: 50px;
+
+        &:hover {
+            background: $color-yellow;
+        }
     }
 }
 
@@ -69,7 +108,7 @@ p {
     border-top: 1px solid $cod-gray;
     border-bottom: 1px solid $cod-gray;
 
-    &--item {
+    &--tile {
         width: 3.03%;
         height: 20%;
 
@@ -113,6 +152,13 @@ p {
     }
 }
 
+.list {
+    line-height: 32px;
+    padding-left: 0;
+
+    li { list-style-type: none; }
+}
+
 @mixin active-state($color, $light-color) {
     &:hover { box-shadow: inset 0px -5px $light-color; }
 
@@ -140,6 +186,7 @@ p {
     &--item {
         color: $tundora;
         border: none;
+        font-family: 'Raleway', sans-serif;
         padding: 15px 0;
         margin: 0 30px;
         transition: 0.5s ease;

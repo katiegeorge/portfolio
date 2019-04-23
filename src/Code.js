@@ -1,29 +1,13 @@
 import React, { Component } from 'react';
 import './App.scss';
 import ProjectCard from './ProjectCard';
+import Tiles from './Tiles';
 
 class Code extends Component {
-    getRandomColor(index) {
-        const colors = ['#61ADC5', '#3E798C', '#ADD9E7', '#ABDFD2', '#6A4994'];
-        let randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-        return randomColor;
-    }
-
     render() {
-        const n = 165;
-        const boxes = [...Array(n)].map((e, i) => (
-            <div
-                className="cover--item"
-                key={i}
-                style={{ backgroundColor: this.getRandomColor(i) }}
-            />
-        ));
         return (
             <React.Fragment>
-                <div className="cover">
-                    { boxes }
-                </div>
+                <Tiles primary="blue" />
                 <div className="section">
                     <h1>Code</h1>
                     <div className="cards-wrapper">
