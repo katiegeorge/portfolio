@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './css/App.scss';
 
 class Tiles extends Component {
     getRandomColor(index, primary) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './css/App.scss';
 import Tiles from './Tiles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -5,8 +5,7 @@ import Design from './Design';
 import Contact from './Contact';
 import Tab from './Tab';
 
-import './App.scss';
-import headshot from './headshot.png';
+import './css/App.scss';
 
 export const ABOUT_TAB = 'about-tab';
 export const DESIGN_TAB = 'design-tab';
