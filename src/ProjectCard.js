@@ -10,14 +10,14 @@ class ProjectCard extends Component {
 
     render() {
         return (
-            <div className="card">
+            <div className="card" onClick={ this.props.onClick }>
                 <h2>{ this.props.title }</h2>
-                <div className="tag-wrapper">
-                    { this.renderTags() }
-                </div>
                 <p className="card--description">
                     { this.props.description }
                 </p>
+                <div className="tag-wrapper">
+                    { this.renderTags() }
+                </div>
             </div>
         );
     }

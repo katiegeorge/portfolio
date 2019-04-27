@@ -10,7 +10,7 @@ class Code extends Component {
                 <Tiles primary="blue" />
                 <div className="section">
                     <h1>Code</h1>
-                    <div className="cards-wrapper">
+                    <div className="cards-wrapper grid-xs-1 grid-lg-3">
                         <ProjectCard
                             title="Navigation redesign"
                             tags={['React', 'Design Systems']}

@@ -33,6 +33,7 @@ h1 {
 }
 
 h2 {
+    margin-top: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-align: center;
@@ -43,7 +44,7 @@ p {
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 2rem;
-    line-height: 30px;
+    line-height: 25px;
 }
 
 .app {
@@ -104,7 +105,7 @@ p {
 }
 
 .card {
-    height: 300px;
+    height: 150px;
     padding: 1rem;
     border-radius: 0.3rem;
     border: 1px solid $gray;
@@ -118,7 +119,7 @@ p {
 
     &--description {
         font-size: 14px;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     &:hover {
@@ -240,20 +241,74 @@ p {
     }
 }
 
+.project {
+    margin-top: 3rem;
+    text-align: left;
+
+    &--title {
+        text-align: left;
+    }
+}
+
 .tag-wrapper {
     display: flex;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .tag {
-    border: 1px solid $color-purple;
+    border: 1px solid $purple-light;
     border-radius: 5px;
-    background-color: $color-purple;
+    background-color: $purple-light;
     color: white;
-    padding: 0.2rem 0.3rem 0;
+    font-weight: 400;
+    padding: 0.1rem 0.4rem;
+
+    &::before {
+        content: '#'
+    }
 
     & + & {
         margin-left: 0.25rem;
     }
+}
+
+
+///// GRID
+
+$grid-breakpoints: (
+  // iPhone SE
+  xxs: 0,
+  // Extra small screen / phone
+  xs: 321px,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+@mixin grid-layout() {
+    $cols: 8;
+
+    @each $bp in map-keys($grid-breakpoints) {
+        @for $col from 1 through $cols {
+            &-#{$bp}-#{$col} {
+                display: grid;
+                grid-gap: 1rem;
+                justify-content: space-between;
+
+                @media(min-width: map-get($grid-breakpoints, $bp)) {
+                    grid-template-columns: repeat($col, 1fr);
+                }
+            }
+        }
+    }
+}
+
+.grid {
+    @include grid-layout();
 }
