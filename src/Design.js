@@ -17,6 +17,14 @@ class Design extends Component {
         }
     }
 
+    isActive(id) {
+        return this.state.selectedProjectId === id;
+    }
+
+     setActiveTab(selectedProjectId) {
+        this.setState({ selectedProjectId });
+    }
+
     renderBody() {
         return (
             <p>
@@ -32,39 +40,67 @@ class Design extends Component {
     }
 
     render() {
+        const projects = [
+            {
+                title: "Navigation redesign",
+                tags: ['UX Design', 'Design Systems'],
+                description: "Redesigned Carta's navigation from scratch.",
+                id: PROJECT_1,
+            },
+            {
+                title: "Rethinking an Investor's landing page",
+                tags: ['React', 'Design Systems'],
+                description: "Gave investors a better summary of their holdings.",
+                id: PROJECT_2,
+            },
+            {
+                title: "Sensory Sea",
+                tags: ['Android', 'Mobile design', 'Haptic feedback'],
+                description: "An android game where you navigate an octopus through tangible obstacles.",
+                id: PROJECT_3,
+            },
+        ];
         return (
             <React.Fragment>
                 <Tiles primary="green" />
                 <div className="section">
                     <h1>Design</h1>
                     <div className="cards-wrapper grid-xs-1 grid-lg-3">
-                        <ProjectCard
-                            title="Navigation redesign"
-                            tags={['React', 'Design Systems']}
-                            description="Redesigned Carta's navigation from scratch."
-                            onClick={ () => this.setState({ selectedProjectId: PROJECT_1 })}
-                        />
-                        <ProjectCard
-                            title="VR Timeline"
-                            tags={['React', 'Design Systems']}
-                            description="Redesigned Carta's navigation from scratch."
-                            onClick={ () => this.setState({ selectedProjectId: PROJECT_2 })}
-                        />
-                        <ProjectCard
-                            title="Responsive Components"
-                            tags={['React', 'Design Systems']}
-                            description="Redesigned Carta's navigation from scratch."
-                            onClick={ () => this.setState({ selectedProjectId: PROJECT_3 })}
-                        />
+                        { projects.map(project => (
+                                <ProjectCard
+                                    title={ project.title }
+                                    tags={ project.tags }
+                                    description={ project.description }
+                                    isActive={ this.isActive(project.id) }
+                                    onActiveTab={ this.setActiveTab.bind(this, project.id) }
+                                    className={ this.isActive(project.id) ? 'card card__active card__active--green' : 'card'}
+                                />
+                            ))
+                        }
                     </div>
                     { this.state.selectedProjectId === PROJECT_1 &&
-                        <Project title="Navigation redesign" body={ this.renderBody() } />
+                        <Project
+                            title="Navigation redesign"
+                            date="Fall 2018"
+                            location="Carta"
+                            body={ this.renderBody() }
+                        />
                     }
                     { this.state.selectedProjectId === PROJECT_2 &&
-                        <Project title="VR Timeline" body={ this.renderBody() } />
+                        <Project
+                            title="Rethinking an investor's landing page"
+                            date="Summer/ Fall 2018"
+                            location="Carta"
+                            body={ this.renderBody() }
+                        />
                     }
                     { this.state.selectedProjectId === PROJECT_3 &&
-                        <Project title="Responsive Components" body={ this.renderBody() } />
+                        <Project
+                            title="Sensory Sea"
+                            date="Summer 2017"
+                            location="Tanvas"
+                            body={ this.renderBody() }
+                        />
                     }
                 </div>
             </React.Fragment>

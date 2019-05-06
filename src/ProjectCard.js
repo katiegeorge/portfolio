@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './css/App.scss';
+import headshot from './assets/headshot.png';
+
 
 class ProjectCard extends Component {
     renderTags() {
@@ -10,7 +12,8 @@ class ProjectCard extends Component {
 
     render() {
         return (
-            <div className="card" onClick={ this.props.onClick }>
+            <div className={ this.props.className } onClick={ this.props.onActiveTab }>
+                <img src={ headshot } className="card--image" />
                 <h2>{ this.props.title }</h2>
                 <p className="card--description">
                     { this.props.description }
