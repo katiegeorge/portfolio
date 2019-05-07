@@ -124,9 +124,22 @@ p {
     }
 
     &--image {
-        width: 100%;
-        object-fit: cover;
+        width: 165px;
         margin-bottom: 1rem;
+
+        &__big {
+            width: 215px;
+        }
+
+        &__small {
+            width: 125px;
+        }
+    }
+
+    &--image-wrapper {
+        height: 250px;
+        display: flex;
+        align-items: center;
     }
 
     &:hover {
@@ -227,7 +240,7 @@ p {
 
 .nav {
     display: grid;
-    grid-gap: 5rem;
+    grid-gap: 0;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
 
@@ -236,10 +249,17 @@ p {
     list-style: none;
     margin-bottom: 1.5rem;
     background-color: white;
-    padding: 15px 0;
+    padding: 15px 40px;
+    position: relative;
 
     &--list {
         text-align: center;
+    }
+
+    &--logo {
+        position: absolute;
+        width: 48px;
+        padding: 0.5rem 1rem;
     }
 
     &--item {
@@ -258,8 +278,8 @@ p {
         }
 
         &__1 { @include active-state($color-purple, $purple-light); }
-        &__2 { @include active-state($color-blue, $blue-light); }
-        &__3 { @include active-state($color-green, $green-light); }
+        &__2 { @include active-state($color-green, $green-light); }
+        &__3 { @include active-state($color-blue, $blue-light); }
         &__4 { @include active-state($color-yellow, $yellow-light); }
     }
 }
@@ -282,14 +302,22 @@ p {
 }
 
 .tag {
-    border: 1px solid $purple-light;
     border-radius: 5px;
-    background-color: $purple-light;
     color: white;
     font-weight: 400;
     padding: 0.1rem 0.4rem;
     margin-bottom: 0.25rem;
     margin-left: 0.25rem;
+
+    &__green {
+        border: 1px solid $color-green;
+        background-color: $color-green;
+    }
+
+    &__blue {
+        border: 1px solid $color-blue;
+        background-color: $color-blue;
+    }
 }
 
 

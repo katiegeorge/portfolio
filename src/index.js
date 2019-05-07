@@ -6,6 +6,7 @@ import About from './About';
 import Code from './Code';
 import Design from './Design';
 import Contact from './Contact';
+import logo from './assets/Logo.png';
 import serviceWorker from './serviceWorker';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -38,6 +39,7 @@ const routing = (
   <Router>
     <div className="app">
       <ul className="nav">
+        <img src={ logo } className="nav--logo" />
         {
             tabs.map(tab => (
                 <li className="nav--list">

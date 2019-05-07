@@ -3,6 +3,9 @@ import './css/App.scss';
 import ProjectCard from './ProjectCard';
 import Project from './Project';
 import Tiles from './Tiles';
+import navigation from './assets/Compass-color.png';
+import investor from './assets/Investment-color.png';
+import octopus from './assets/Octopus-color.png';
 
 export const PROJECT_1 = 'project-1';
 export const PROJECT_2 = 'project-2';
@@ -45,18 +48,22 @@ class Design extends Component {
                 title: "Navigation redesign",
                 tags: ['UX Design', 'Design Systems'],
                 description: "Redesigned Carta's navigation from scratch.",
+                image: navigation,
                 id: PROJECT_1,
             },
             {
                 title: "Rethinking an Investor's landing page",
                 tags: ['React', 'Design Systems'],
                 description: "Gave investors a better summary of their holdings.",
+                image: investor,
                 id: PROJECT_2,
+                size: "big",
             },
             {
                 title: "Sensory Sea",
                 tags: ['Android', 'Mobile design', 'Haptic feedback'],
                 description: "An android game where you navigate an octopus through tangible obstacles.",
+                image: octopus,
                 id: PROJECT_3,
             },
         ];
@@ -70,6 +77,9 @@ class Design extends Component {
                                 <ProjectCard
                                     title={ project.title }
                                     tags={ project.tags }
+                                    color="green"
+                                    image={ project.image }
+                                    size={ project.size === "big" ? "big" : null }
                                     description={ project.description }
                                     isActive={ this.isActive(project.id) }
                                     onActiveTab={ this.setActiveTab.bind(this, project.id) }

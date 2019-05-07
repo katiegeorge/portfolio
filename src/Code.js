@@ -3,6 +3,9 @@ import './css/App.scss';
 import ProjectCard from './ProjectCard';
 import Project from './Project';
 import Tiles from './Tiles';
+import alert from './assets/Bell-color.png';
+import mobile from './assets/Mobile-color.png';
+import vr from './assets/VR-color.png';
 
 export const PROJECT_1 = 'project-1';
 export const PROJECT_2 = 'project-2';
@@ -45,18 +48,22 @@ class Code extends Component {
                 title: "Making Carta mobile-first",
                 tags: ['React', 'Design Systems', 'CSS', 'Mobile first'],
                 description: "Created Carta's first mobile-friendly product.",
+                image: mobile,
+                size: "small",
                 id: PROJECT_1,
             },
             {
                 title: "VR Timeline",
                 tags: ['WebVR', 'A-Frame', 'HTML/CSS'],
                 description: "A virtual-reality timeline of the history of women's rights.",
+                image: vr,
                 id: PROJECT_2,
             },
             {
                 title: "Alert component",
                 tags: ['React', 'HTML/CSS', 'Design Systems'],
                 description: "Built an unbreakable alert component for Carta's design system.",
+                image: alert,
                 id: PROJECT_3,
             },
         ];
@@ -70,6 +77,9 @@ class Code extends Component {
                                 <ProjectCard
                                     title={ project.title }
                                     tags={ project.tags }
+                                    image={ project.image }
+                                    color="blue"
+                                    size={ project.size === "small" ? "small" : null }
                                     description={ project.description }
                                     isActive={ this.isActive(project.id) }
                                     onActiveTab={ this.setActiveTab.bind(this, project.id) }
