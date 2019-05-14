@@ -6,6 +6,8 @@ import Tiles from './Tiles';
 import alert from './assets/Bell-color.png';
 import mobile from './assets/Mobile-color.png';
 import vr from './assets/VR-color.png';
+import vr1 from './assets/vr-timeline-1.png';
+import vr2 from './assets/vr-timeline-2.png';
 
 export const PROJECT_1 = 'project-1';
 export const PROJECT_2 = 'project-2';
@@ -42,6 +44,34 @@ class Code extends Component {
         );
     }
 
+    renderVRTimeline() {
+        return (
+            <React.Fragment>
+            <div className="project--images grid-xs-1 grid-md-2">
+                <img src={ vr1 } className="project--image" />
+                <img src={ vr2 } className="project--image" />
+            </div>
+            <p>
+                An independent project I worked on in the Knight Lab using A-Frame and MagicaVoxel.
+                I wanted to create something to celebrate the history of feminism and women's rights in the United States post 1800,
+                and thought a timeline could capture my ideas.
+                I created all of the scenes and characters from scratch and added some simple animations in Javascript.
+                Users can view the timeline with Google Cardboard or in their web browsers.
+            </p>
+            <p>
+                <a href="https://medium.com/@katie.george/making-a-timeline-vr-style-8276149fb780">
+                    Read my Medium article about my process here. &rsaquo;
+                </a>
+            </p>
+            <p>
+                <a href="https://katiegeorge.github.io/VRTimeline/" target="_blank">
+                    Or just check it out live! &rsaquo;
+                </a>
+            </p>
+            </React.Fragment>
+        );
+    }
+
     render() {
         const projects = [
             {
@@ -72,7 +102,7 @@ class Code extends Component {
                 <Tiles primary="blue" />
                 <div className="section">
                     <h1>Code</h1>
-                    <div className="cards-wrapper grid-xs-1 grid-lg-3">
+                    <div className="cards-wrapper grid-xs-1 grid-md-3 grid-lg-2 grid-xl-3">
                         { projects.map(project => (
                                 <ProjectCard
                                     title={ project.title }
@@ -83,7 +113,7 @@ class Code extends Component {
                                     description={ project.description }
                                     isActive={ this.isActive(project.id) }
                                     onActiveTab={ this.setActiveTab.bind(this, project.id) }
-                                    className={ this.isActive(project.id) ? 'card card__active card__active--blue' : 'card'}
+                                    className={ this.isActive(project.id) ? 'card card__active card__active--blue' : 'card' }
                                 />
                             ))
                         }
@@ -100,8 +130,8 @@ class Code extends Component {
                         <Project
                             title="VR Timeline"
                             date="Spring 2017"
-                            location="Carta"
-                            body={ this.renderBody() }
+                            location="Northwestern Knight Lab"
+                            body={ this.renderVRTimeline() }
                         />
                     }
                     { this.state.selectedProjectId === PROJECT_3 &&

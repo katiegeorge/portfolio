@@ -9,11 +9,12 @@ body {
 
 a {
     font-size: 20px;
-    text-decoration: underline;
+    border-bottom: 1px solid black;
+    text-decoration: none;
     color: black;
 
     &:visited, &:hover, &:active {
-        text-decoration: underline;
+        border-bottom: 1px solid black;
     }
 }
 
@@ -57,7 +58,7 @@ p {
 }
 
 .btn {
-    border: 1px solid $blue-dark;
+    border: 1px solid $purple-dark;
     border-radius: 3px;
     color: white;
     display: block;
@@ -65,13 +66,13 @@ p {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
-    background: $blue-dark;
+    background: $purple-dark;
     transition: 0.2s ease;
     box-sizing: border-box;
 
     &:hover {
         cursor: pointer;
-        background: $color-blue;
+        background: $color-purple;
         text-decoration: none;
     }
 
@@ -288,8 +289,28 @@ p {
     margin-top: 3rem;
     text-align: left;
 
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $silver-chalice;
+    }
+
     &--title {
         text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    &--images {
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    &--image {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
