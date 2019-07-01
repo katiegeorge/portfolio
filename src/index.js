@@ -16,7 +16,7 @@ const tabs = [
     {
         label: 'About',
         id: 1,
-        path: '/about',
+        path: '/',
     },
     {
         label: 'Design',
@@ -44,6 +44,7 @@ const routing = (
             tabs.map(tab => (
                 <li className="nav--list">
                     <NavLink
+                        exact
                         className={ `nav--item nav--item__${tab.id}` }
                         activeClassName={ `nav--item__${tab.id}__active` }
                         to={ tab.path }
@@ -54,7 +55,7 @@ const routing = (
             ))
         }
       </ul>
-      <Route exact path="/about" component={About} />
+      <Route exact path="/" component={About} />
       <Route path="/design" component={Design} />
       <Route path="/code" component={Code} />
       <Route path="/contact" component={Contact} />
