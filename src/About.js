@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import './css/App.scss';
 import Tiles from './Tiles';
 import headshot from './assets/headshot.png';
+import kingsofleon from './assets/kingsofleon.jpg';
+import ytg from './assets/youngthegiant.jpg';
+import howibuiltthis from './assets/howibuiltthis.jpg';
+import hiddenbrain from './assets/hiddenbrain.jpg';
+import freakonomics from './assets/freakonomics.jpg';
+import lakestreetdive from './assets/lakestreetdive.jpg';
 
 class About extends Component {
     render() {
@@ -27,16 +33,18 @@ class About extends Component {
                                 By day, I design and build investor experiences for <a href="https://carta.com" target="_blank">Carta</a>. I like combining development and design to create cool stuff- which means yes, I do indeed have a love/hate relationship with CSS. In a former life, I graduated from Northwestern University with an MS in Computer Science. Before that, I got my BA in Psychology also from NU.
                             </p>
                             <p>
-                                I also <a target="_blank" href="https://medium.com/@katie.george">write sometimes</a>, hike around the PNW, play ultimate frisbee, and hang out with my parents' dog. Talk to me about design systems, front-end dev, human-computer interaction, or women in tech.
+                                I also <a target="_blank" href="https://medium.com/@katie.george">write</a>, <a target="_blank" href="https://www.wta.org/go-outside/map">hike around the PNW</a>, and <a target="_blank" href="https://www.youtube.com/watch?v=wb4d-t_LY_8">play ultimate frisbee</a>. Talk to me about design systems, front-end dev, human-computer interaction, or women in tech.
                             </p>
-                            <p>Things I think are cool:</p>
-                            <ul>
-                                <li>Invisibilia</li>
-                                <li>Hidden Brain</li>
-                                <li>Young The Giant</li>
-                                <li>Freakonomics</li>
-                                <li>Atomic Design</li>
-                            </ul>
+                            <p>Things I'm listening to right now:</p>
+                            <div>
+                                <img src={ freakonomics } className="section--image" />
+                                <img src={ hiddenbrain } className="section--image" />
+                                <img src={ howibuiltthis } className="section--image" />
+                                <img src={ ytg } className="section--image" />
+                                <img src={ kingsofleon } className="section--image" />
+                                <img src={ lakestreetdive } className="section--image" />
+                                
+                            </div>
                         </div>
                     </div>
                 </div>

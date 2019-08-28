@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran|Raleway');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800');
 
+$grid-breakpoints: (
+  // iPhone SE
+  xxs: 0,
+  // Extra small screen / phone
+  xs: 321px,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -96,6 +111,10 @@ p {
         &:hover {
             background: $yellow-light;
             text-decoration: none;
+        }
+
+        &, &:visited, &:hover, &:active {
+            border-bottom: none;
         }
     }
 }
@@ -203,7 +222,7 @@ p {
 
     &--image {
         height: 200px;
-        margin-bottom: 1rem;
+        margin: 0 0.25rem 1rem 0.25rem;
     }
 
     &--content {
@@ -253,6 +272,13 @@ p {
     padding: 15px 40px;
     position: relative;
 
+    @media(max-width: map-get($grid-breakpoints, sm)) {
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+        padding-left: 100px;
+    }
+
     &--list {
         text-align: center;
     }
@@ -275,6 +301,10 @@ p {
         &:hover {
             cursor: pointer;
             text-decoration: none;
+        }
+
+        &, &:active, &:visited, &:hover {
+            border: none;
         }
 
         &__1 { @include active-state($color-purple, $purple-light); }
@@ -346,21 +376,6 @@ p {
 
 
 ///// GRID
-
-$grid-breakpoints: (
-  // iPhone SE
-  xxs: 0,
-  // Extra small screen / phone
-  xs: 321px,
-  // Small screen / phone
-  sm: 544px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
-);
 
 @mixin grid-layout() {
     $cols: 8;
