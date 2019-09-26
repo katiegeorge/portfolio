@@ -36,7 +36,7 @@ class About extends Component {
                                 I also <a target="_blank" href="https://medium.com/@katie.george">write</a>, <a target="_blank" href="https://www.wta.org/go-outside/map">hike around the PNW</a>, and <a target="_blank" href="https://www.youtube.com/watch?v=wb4d-t_LY_8">play ultimate frisbee</a>. Talk to me about design systems, front-end dev, human-computer interaction, or women in tech.
                             </p>
                             <p>Things I'm listening to right now:</p>
-                            <div>
+                            <div className="section--image-wrapper">
                                 <img src={ freakonomics } className="section--image" />
                                 <img src={ hiddenbrain } className="section--image" />
                                 <img src={ howibuiltthis } className="section--image" />

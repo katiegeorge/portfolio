@@ -7,10 +7,7 @@ import Code from './Code';
 import Design from './Design';
 import Contact from './Contact';
 import logo from './assets/Logo.png';
-import serviceWorker from './serviceWorker';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fabLinkedIn } from '@fortawesome/free-solid-svg-icons'
+
 
 const tabs = [
     {

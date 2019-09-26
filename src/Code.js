@@ -90,7 +90,22 @@ class Code extends Component {
           <img src={mobile4} className="project--image project--image__vertical" />
         </div>
         <p>
-          Phones are cool.
+          In June 2018, the Investor Services team at Carta redesigned our
+          product from the ground up, making it fully mobile-friendly.
+          Our research showed that investors were always on the go, 
+          and needed to see their portfolio companies on their phones. 
+          Because of this, we made it a priority to make all of their 
+          data available for them in a nicely layed out way.
+        </p>
+        <p>
+          I wrote an article about how I created mobile-responsive 
+          pages for this product.
+          <a
+            href="https://medium.com/@katie.george/making-mobile-responsive-pages-da2f8a7e447e"
+            target="_blank"
+          >
+            Check it out the strategy here!
+          </a>
         </p>
       </React.Fragment>
     );

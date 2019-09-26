@@ -128,52 +128,55 @@ class Design extends Component {
             },
         ];
         return (
-            <React.Fragment>
-                <Tiles primary="green" />
-                <div className="section">
-                    <h1>Design</h1>
-                    <div className="cards-wrapper grid-xs-1 grid-lg-3">
-                        { projects.map(project => (
-                                <ProjectCard
-                                    title={ project.title }
-                                    tags={ project.tags }
-                                    color="green"
-                                    image={ project.image }
-                                    size={ project.size === "big" ? "big" : null }
-                                    description={ project.description }
-                                    isActive={ this.isActive(project.id) }
-                                    onActiveTab={ this.setActiveTab.bind(this, project.id) }
-                                    className={ this.isActive(project.id) ? 'card card__active card__active--green' : 'card'}
-                                />
-                            ))
-                        }
-                    </div>
-                    { this.state.selectedProjectId === PROJECT_1 &&
-                        <Project
-                            title="Navigation redesign"
-                            date="Fall 2018"
-                            location="Carta"
-                            body={ this.renderNav() }
-                        />
+          <React.Fragment>
+            <Tiles primary="green" />
+            <div className="section">
+              <h1>Design</h1>
+              <div className="cards-wrapper grid-xs-1 grid-md-3 grid-lg-2 grid-xl-3">
+                {projects.map(project => (
+                  <ProjectCard
+                    title={project.title}
+                    tags={project.tags}
+                    color="green"
+                    image={project.image}
+                    size={project.size === "big" ? "big" : null}
+                    description={project.description}
+                    isActive={this.isActive(project.id)}
+                    onActiveTab={this.setActiveTab.bind(this, project.id)}
+                    className={
+                      this.isActive(project.id)
+                        ? "card card__active card__active--green"
+                        : "card"
                     }
-                    { this.state.selectedProjectId === PROJECT_2 &&
-                        <Project
-                            title="Rethinking an investor's landing page"
-                            date="Summer/ Fall 2018"
-                            location="Carta"
-                            body={ this.renderLandingPage() }
-                        />
-                    }
-                    { this.state.selectedProjectId === PROJECT_3 &&
-                        <Project
-                            title="Sensory Sea"
-                            date="Summer 2017"
-                            location="Tanvas"
-                            body={ this.renderSensorySea() }
-                        />
-                    }
-                </div>
-            </React.Fragment>
+                  />
+                ))}
+              </div>
+              {this.state.selectedProjectId === PROJECT_1 && (
+                <Project
+                  title="Navigation redesign"
+                  date="Fall 2018"
+                  location="Carta"
+                  body={this.renderNav()}
+                />
+              )}
+              {this.state.selectedProjectId === PROJECT_2 && (
+                <Project
+                  title="Rethinking an investor's landing page"
+                  date="Summer/ Fall 2018"
+                  location="Carta"
+                  body={this.renderLandingPage()}
+                />
+              )}
+              {this.state.selectedProjectId === PROJECT_3 && (
+                <Project
+                  title="Sensory Sea"
+                  date="Summer 2017"
+                  location="Tanvas"
+                  body={this.renderSensorySea()}
+                />
+              )}
+            </div>
+          </React.Fragment>
         );
     }
 }

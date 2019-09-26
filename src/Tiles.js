@@ -21,7 +21,18 @@ class Tiles extends Component {
     }
 
     render() {
-        const n = 165;
+        const isMobile = window.innerWidth <= 544;
+        const isTablet = window.innerWidth <= 768;
+
+        let n;
+        if (isMobile) {
+            n = 60;
+        } else if (isTablet) {
+            n = 125;
+        } else {
+            n = 165;
+        }
+        
         const tiles = [...Array(n)].map((e, i) => (
             <div
                 className="cover--tile"
