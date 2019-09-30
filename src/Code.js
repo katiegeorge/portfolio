@@ -44,8 +44,55 @@ class Code extends Component {
           <img src={alert2} className="project--image" />
         </div>
         <p>
-          Bzzz bzz.
+          This component is one of several Ink components I've created over the
+          past 18 months. To see Ink (Carta's Design System),{" "}
+          <a href="https://ink.carta.com/ink-components#alert" target="_blank">
+            check it out here.
+          </a>
         </p>
+        <p>
+          There were several aspects I considered when building this component:
+        </p>
+          <ul>
+            <li>
+              <strong>
+                The need for a temporary vs. permanent alert.
+              </strong>
+              <p>
+                Some alerts, like an alert for a successful form submission, only 
+                need to be present for a few seconds. Others, like a download alert,
+                need to be persistant until the user closes it. I included an "isPersistant"
+                boolean prop that adds a close button and keeps the alert present on the screen.
+              </p>
+            </li>
+            <li>
+              <strong>An "action" button.</strong>
+              <p>
+                I debated for a while if this button should always say "View," since
+                at the time of building, the only case for an action button inside an alert 
+                was the "View" button in a download alert. However, I realized there
+                could be other cases and that the component should be flexible and scalable.
+                Therefore, this prop takes an object that has an onClick and any text.
+              </p>
+            </li>
+            <li>
+              <strong>The types of alerts (and whether or not to include error alerts).</strong>
+              <p>
+                In general, I am opposed to using alerts to indicate an error. The user can easily
+                miss the alert and be left not knowing what went wrong. I left it in for backwards
+                compatibility purposes, and left it out of the documentation. Instead, I encourage
+                people to use an error banner or field-level error messages to indicate errors.
+              </p>
+            </li>
+            <li>
+              <strong>The similarities to the Banner component</strong>
+              <p>
+                Because the alert and banner components are so similar in appearance, I actually
+                created an shared internal component I called "snackbar" (snackbar has two flavors,
+                "banner" and "alert", har har). Internally, Banner and Alert look very similar!
+                </p>
+            </li>
+          </ul> 
       </React.Fragment>
     );
   }
@@ -99,7 +146,7 @@ class Code extends Component {
         </p>
         <p>
           I wrote an article about how I created mobile-responsive 
-          pages for this product.
+          pages for this product.{" "}
           <a
             href="https://medium.com/@katie.george/making-mobile-responsive-pages-da2f8a7e447e"
             target="_blank"

@@ -37,13 +37,47 @@ class Design extends Component {
         return (
           <React.Fragment>
             <div className="project--images grid-xs-1">
-              <img
-                src={nav1}
-                className="project--image"
-              />
+              <img src={nav1} className="project--image" />
             </div>
             <p>
-              Nav component.
+              In the Fall of 2018, we decided Carta's main navigation needed a
+              redesign. The old navigation often got mistaken for buttons
+              instead of nav items, the contrast wasn't very good, and it wasn't
+              in Ink, our design system.
+            </p>
+            <p>
+              The team was mostly in Rio de Janiero, so I flew down from Seattle
+              and spent two weeks "cage-matching" this navigation redesign. It
+              was the first Ink component I built and designed fully.
+            </p>
+            <p>
+              As you can see from the image, there are several modifiers one can
+              make to the nav. The default is gray and horizontal with a blue
+              active state. If too many items appear in the nav, they
+              automatically get put into a dropdown with the label "More." There
+              are also subnav and vertical versions.
+            </p>
+            <p>
+              On mobile, the nav automatically becomes bigger (for a larger
+              touch target), and scrolls horizontally with a fade out effect to
+              indicate to the user that there are more items.
+              I also created a nav wrapper for dropdowns, so that it would be
+              seamless for people to add dropdowns to their nav if they wanted.
+            </p>
+            <p>
+              To see this component live,{" "}
+              <a
+                href="https://ink.carta.com/ink-components#nav"
+                target="_blank"
+              >
+                check it out on Ink's docs!
+              </a>
+            </p>
+            <p>
+              For more on Ink and Carta's Design System,{" "}
+              <a href="https://ink.carta.com/" target="_blank">
+                check out our website.
+              </a>
             </p>
           </React.Fragment>
         );
@@ -96,7 +130,26 @@ class Design extends Component {
               <img src={landing2} className="project--image" />
             </div>
             <p>
-              Investors need a landing page, so we gave them one.
+              After talking to a lot of investors in our research, we found out that
+              investors are on the go - and Carta wasn't on mobile. Data was jumbled and hard to find.
+              There was no good place for one to see all the most important data for each portfolio company.
+              We needed an overview page. This would be a page where, if an investor wanted to take a 
+              quick glance at a company, it would be easy.
+            </p>
+            <p>
+              This was about a 4 month project. We completely gutted the old investor experience and put
+              information where people expected to see it. They could now see their holdings data, capitalization 
+              data, key metrics, ownership percentage, people, and company profile all in one place.
+            </p>
+            <p>
+              At the same time, we made the entire experience simpler and mobile-friendly.
+            </p>
+            <p>
+              For more on how we redesigned the investor experience, check out{" "}
+              <a href="https://carta.com/blog/simplify-how-you-manage-your-portfolio/">
+                this blog post
+              </a>{" "}
+              from our marketing team.
             </p>
           </React.Fragment>
         );

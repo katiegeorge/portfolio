@@ -63,6 +63,10 @@ p {
     line-height: 25px;
 }
 
+li {
+    font-size: 20px;
+}
+
 .app {
     background-color: $silver-chalice;
     color: $cod-gray;
@@ -144,12 +148,24 @@ p {
         width: 165px;
         margin-bottom: 1rem;
 
+        @media(max-width: map-get($grid-breakpoints, md)) {
+            width: 40px;
+        }
+
         &__big {
             width: 215px;
+
+            @media(max-width: map-get($grid-breakpoints, md)) {
+                width: 60px;
+            }
         }
 
         &__small {
             width: 125px;
+
+            @media(max-width: map-get($grid-breakpoints, md)) {
+                width: 30px;
+            }
         }
     }
 
@@ -157,6 +173,10 @@ p {
         height: 250px;
         display: flex;
         align-items: center;
+
+        @media(max-width: map-get($grid-breakpoints, md)) {
+            height: 80px;
+        }
     }
 
     &:hover {
