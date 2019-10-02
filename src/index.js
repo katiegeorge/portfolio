@@ -33,7 +33,7 @@ const tabs = [
 ];
 
 const routing = (
-  <Router>
+  <Router basename="/portfolio">
     <div className="app">
       <ul className="nav">
         <img src={ logo } className="nav--logo" />
