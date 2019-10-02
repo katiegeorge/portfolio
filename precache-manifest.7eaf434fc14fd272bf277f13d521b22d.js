@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/mobile1.0ffbc33b.png"
   },
   {
-    "revision": "b3460052dc5864d84a9c",
+    "revision": "bbc4379c8fbfb98e71df",
     "url": "/portfolio/static/css/main.f7773e71.chunk.css"
   },
   {
@@ -60,8 +60,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/vr-timeline-2.dce65330.png"
   },
   {
-    "revision": "b3460052dc5864d84a9c",
-    "url": "/portfolio/static/js/main.e8d8fb77.chunk.js"
+    "revision": "bbc4379c8fbfb98e71df",
+    "url": "/portfolio/static/js/main.2a717edd.chunk.js"
   },
   {
     "revision": "c0692bdffb7549c287b95146970c18c5",
@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/Logo.8397cb2a.png"
   },
   {
-    "revision": "6d4438cc38e206fc2f5c845733f18557",
+    "revision": "0abcf4fe9cc30c9cf4e3e3630c7339ff",
     "url": "/portfolio/index.html"
   }
 ];
