@@ -30,7 +30,7 @@ class About extends Component {
                             <h1>Hi, I'm Katie. 👋</h1>
                             <p>I'm a designer and developer based in Seattle.</p>
                             <p>
-                                By day, I design and build investor experiences for <a href="https://carta.com" target="_blank">Carta</a>. I like combining development and design to create cool stuff- which means yes, I do indeed have a love/hate relationship with CSS. In a former life, I graduated from Northwestern University with an MS in Computer Science. Before that, I got my BA in Psychology also from NU.
+                                By day, I design and build design systems for <a href="https://carta.com" target="_blank">Carta</a>. I like combining development and design to create cool stuff- which means yes, I do indeed have a love/hate relationship with CSS. In a former life, I graduated from Northwestern University with an MS in Computer Science. Before that, I got my BA in Psychology also from NU.
                             </p>
                             <p>
                                 I also <a target="_blank" href="https://medium.com/@katie.george">write</a>, <a target="_blank" href="https://www.wta.org/go-outside/map">hike around the PNW</a>, and <a target="_blank" href="https://www.youtube.com/watch?v=wb4d-t_LY_8">play ultimate frisbee</a>. Talk to me about design systems, front-end dev, human-computer interaction, or women in tech.
