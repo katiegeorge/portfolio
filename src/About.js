@@ -19,7 +19,7 @@ class About extends Component {
                         <div className="section--images">
                             <img src={ headshot } className="section--image" />
                             <a
-                                href="https://drive.google.com/file/d/1Ohvax04Gy_YxfpiHk5UctV5zz8AQp89Y/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1Tw5gJJGwuSWNFuBkQqGzC2wTY34NjiSt/view?usp=sharing"
                                 target="_blank"
                                 className="btn btn__block"
                             >
